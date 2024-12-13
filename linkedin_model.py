@@ -23,3 +23,13 @@ X_train, X_test, y_train, y_test = train_test_split(X.values,
                                                     random_state=987)
 lr = model = LogisticRegression(class_weight='balanced', random_state=987)
 lr.fit(X_train, y_train)
+
+st.title("LinkedIn User Prediction")
+
+st.title("LinkedIn User Prediction")
+
+# User input fields
+age = st.number_input("Age", min_value=18, max_value=100, step=1)
+education = st.selectbox("Education Level", ["High School", "Bachelor's", "Master's", "Doctorate"])
+num_companies = st.number_input("Number of Companies Worked", min_value=0, max_value=20, step=1)
+satisfaction = st.slider("Job Satisfaction (1-5)", min_value=1, max_value=5)
