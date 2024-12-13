@@ -28,13 +28,13 @@ st.title("LinkedIn User Prediction")
 
 st.markdown("data defintions:")
 
-st.markdown("age (numeric age): 1 to 97")
+st.markdown("Age: 1 to 97")
 
-st.markdown("1 Less than high school, 2	High school incomplete, 3 High school graduate, 4 Some college no degree, 5 Two-year associate degree, 6 Four-year college, 7 Some postgraduate or professional schooling, 8 Postgraduate or professional degree")
+st.markdown("Education: 1 Less than high school, 2	High school incomplete, 3 High school graduate, 4 Some college no degree, 5 Two-year associate degree, 6 Four-year college, 7 Some postgraduate or professional schooling, 8 Postgraduate or professional degree")
 
 st.markdown("Parent: 1 Yes, 2 No")
 
-st.markdown("current marital status: 1 Married, 2 Living with a partner, 3 Divorced,4 Separated,5 Widowed, 6 Never been married")
+st.markdown("Current Marital Status: 1 Married, 2 Living with a partner, 3 Divorced,4 Separated,5 Widowed, 6 Never been married")
 
 # User input fields
 age = st.number_input("Age", min_value=1, max_value=97, step=1)
