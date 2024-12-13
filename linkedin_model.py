@@ -36,6 +36,8 @@ st.markdown("Parent: 1 Yes, 2 No")
 
 st.markdown("Current Marital Status: 1 Married, 2 Living with a partner, 3 Divorced,4 Separated,5 Widowed, 6 Never been married")
 
+st.markdown("Income: 1 (less money), 9 (lots of money)")
+
 # User input fields
 age = st.number_input("Age", min_value=1, max_value=97, step=1)
 education = st.number_input("Education", min_value=1, max_value=8, step=1)
