@@ -29,7 +29,23 @@ st.title("LinkedIn User Prediction")
 st.title("LinkedIn User Prediction")
 
 # User input fields
-age = st.number_input("Age", min_value=18, max_value=100, step=1)
-education = st.selectbox("Education Level", ["High School", "Bachelor's", "Master's", "Doctorate"])
-num_companies = st.number_input("Number of Companies Worked", min_value=0, max_value=20, step=1)
-satisfaction = st.slider("Job Satisfaction (1-5)", min_value=1, max_value=5)
+age = st.number_input("Age", min_value=1, max_value=97, step=1)
+education = st.number_input("Age", min_value=1, max_value=8, step=1)
+parent = st.number_input("Age", min_value=1, max_value=2, step=1)
+marital = st.number_input("Age", min_value=1, max_value=6, step=1)
+income = st.number_input("Age", min_value=1, max_value=9, step=1)
+
+if st.button("Predict LinkedIn User"):
+    # Create input array for prediction
+    user_data = np.array([[income, education, parent, marital, age]])
+    
+    # Make prediction and compute probability
+    prediction = lr.predict(user_data)
+    probability = lr.predict_proba(user_data)[:, 1]  # Probability for class 1 (LinkedIn user)
+    
+    # Display the results
+    if prediction == 1:
+        st.success(f"The person is predicted to be a LinkedIn user with a probability of {probability[0]:.2f}.")
+    else:
+        st.info(f"The person is predicted to NOT be a LinkedIn user with a probability of {probability[0]:.2f}.")
+
